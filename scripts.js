@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 `;
                                 break;
 
-                            case 'Protocolos Salud Total':
+                            case 'Protocolos':
                                 professionalContent = `
                                     <article class="document-card">
                                         <h2>Protocolos de Salud y Seguridad</h2>
@@ -138,6 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+
 
 
 
