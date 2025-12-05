@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 `;
                                 break;
 
-                            case 'Protocolos':
+                            case 'Protocolos Salud Total':
                                 professionalContent = `
                                     <article class="document-card">
                                         <h2>Protocolos de Salud y Seguridad</h2>
