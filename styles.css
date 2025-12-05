@@ -1,0 +1,459 @@
+/* 1. Reset Básico para Consistencia */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Estilos Globales (CLARIDAD DE CONTENIDOS y USABILIDAD) */
+body {
+    /* Fuente clara para alta legibilidad */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    line-height: 1.6;
+    background-color: #f8f9fa; /* Fondo claro para alto contraste */
+    color: #333;
+}
+
+main {
+    padding: 2rem;
+    max-width: 1200px; /* Ancho máximo consistente */
+    margin: 0 auto;
+}
+
+.content-section {
+    margin-bottom: 50px;
+    padding-top: 20px;
+}
+
+h1 {
+    color: #004d99; /* Color corporativo principal */
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #004d99;
+    /* Separador visual para jerarquía y claridad */
+    border-bottom: 2px solid #ccc; 
+    padding-bottom: 10px;
+    margin: 40px 0 20px 0;
+}
+
+.summary {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    /* Separador sutil */
+    border-bottom: 1px dashed #ddd; 
+}
+
+
+/* 3. HEADER y NAVEGACIÓN (DISEÑO y ORGANIZACIÓN - Usabilidad OE 1) */
+.main-header {
+    background-color: #004d99; /* Azul corporativo fuerte */
+    color: white;
+    padding: 10px 20px 0 20px; /* Ajustamos padding inferior */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Nuevo contenedor para Título y Búsqueda */
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px; /* Espacio antes de la navegación */
+}
+
+.main-header h1 {
+    font-size: 1.5rem;
+    color: white;
+    margin: 0;
+}
+
+.main-header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    justify-content: space-around; /* Distribuye uniformemente los enlaces */
+}
+
+.main-header nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.main-header nav ul li a:hover {
+    /* Feedback visual para la interacción */
+    background-color: #007bff; 
+}
+
+
+/* 4. Barra de Búsqueda (CRÍTICO - Velocidad de Acceso OE 1) */
+.search-box {
+    display: flex;
+    /* Eliminamos margin-right: 20px; para centrar */
+}
+
+.search-box input {
+    padding: 8px 15px;
+    border: none;
+    /* Diseño destacado y fácil de hacer clic */
+    border-radius: 20px 0 0 20px; 
+    min-width: 300px;
+    outline: none;
+}
+/* ... el resto de la sección 4 es correcto ... */
+.search-box button {
+    padding: 8px 15px;
+    background-color: #ffcc00; /* Color de acción/alerta */
+    border: none;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    color: #333;
+    transition: background-color 0.3s;
+}
+
+.search-box button:hover {
+    background-color: #ffdc5c;
+}
+
+
+/* 5. SECCIÓN PROCESOS Y NORMAS (ORGANIZACIÓN y CLARIDAD - OE 1 y OE 3) */
+.process-filters {
+    margin-bottom: 30px;
+    display: flex;
+    /* Espacio entre botones para Usabilidad */
+    gap: 10px; 
+    flex-wrap: wrap; /* Para responsividad */
+}
+
+.filter-btn {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    
+    /* CAMBIOS AGREGADOS PARA UNIFORMAR EL TAMAÑO */
+    min-width: 150px; /* Asegura un ancho mínimo fijo */
+    text-align: center; /* Centra el texto dentro del botón */
+}
+
+.filter-btn:hover, .filter-btn.active {
+    /* Estado activo para Claridad y Feedback */
+    background-color: #007bff; 
+    color: white;
+    border-color: #007bff;
+}
+
+.document-list {
+    display: grid;
+    /* Formato de tarjeta estandarizado */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+    gap: 25px;
+}
+
+.document-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    /* Borde distintivo para estandarización de documentos oficiales */
+    border-left: 5px solid #004d99; 
+}
+
+.document-card h2 {
+    font-size: 1.5rem;
+    color: #004d99;
+    margin-top: 0;
+    border-bottom: none;
+}
+
+.doc-meta {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+.document-card ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.download-link {
+    display: inline-block;
+    color: #28a745; /* Verde para acción de descarga/éxito */
+    font-weight: bold;
+    text-decoration: none;
+    padding-top: 5px;
+}
+
+/* 6. SECCIÓN COMUNICADOS Y NOTICIAS (ESTÉTICA y CLARIDAD - OE 3) */
+.news-feed {
+    display: flex;
+    flex-direction: column; 
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.news-card {
+    display: flex;
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    /* Borde para diferenciar comunicados */
+    border-left: 8px solid #007bff; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+}
+
+.news-card:hover {
+    /* Efecto para engagement */
+    transform: translateY(-2px); 
+}
+
+.news-date {
+    background-color: #f0f0f0;
+    color: #004d99;
+    min-width: 60px;
+    text-align: center;
+    border-radius: 5px;
+    margin-right: 20px;
+    padding: 5px;
+}
+
+.news-date .day {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.news-date .month {
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.news-body h3 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.news-body p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.read-more {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* 7. SECCIÓN CAPACITACIÓN EN VIDEO (USABILIDAD) */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.video-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.video-card:hover {
+    /* Efecto para engagement */
+    transform: translateY(-5px); 
+}
+
+.video-player {
+    position: relative;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    height: 0;
+}
+
+.video-player iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-card h3 {
+    padding: 15px 15px 5px;
+    font-size: 1.2rem;
+    color: #004d99;
+}
+
+.video-meta {
+    padding: 0 15px 15px;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* 8. SECCIÓN INTERACTIVA (ENGAGEMENT - OE 2) */
+.interactive-section {
+    /* Fondo para destacar la sección de participación */
+    background-color: #e6f0ff; 
+    padding: 30px 20px;
+    border-radius: 10px;
+}
+
+.interactive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.widget-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    /* Borde primario para widgets de participación */
+    border-top: 4px solid #007bff; 
+}
+
+.widget-card h3 {
+    color: #007bff;
+    font-size: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: none;
+}
+
+.poll-options {
+    margin: 15px 0;
+}
+
+.poll-options input[type="radio"] {
+    margin-right: 5px;
+}
+
+.poll-options label {
+    display: inline-block;
+    margin-right: 15px;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.submit-btn, .btn-forum {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.submit-btn {
+    background-color: #ffcc00; /* Amarillo para botones de acción/voto */
+    color: #333;
+}
+
+.submit-btn:hover {
+    background-color: #ffdc5c;
+}
+
+.btn-forum {
+    background-color: #004d99;
+    color: white;
+}
+
+.btn-forum:hover {
+    background-color: #007bff;
+}
+
+.recognition-widget {
+    /* Borde verde para destacar el reconocimiento y bienestar */
+    border-top: 4px solid #28a745; 
+}
+
+.recognition-widget h3 {
+    color: #28a745;
+}
+
+
+/* 9. FOOTER */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9rem;
+    margin-top: 40px;
+}
+
+/* 10. Diseño Responsivo (USABILIDAD y MOBILE-FIRST) */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .search-box {
+        width: 100%;
+        margin: 10px 0;
+    }
+    
+    .search-box input {
+        min-width: 70%;
+    }
+
+    .main-header nav ul {
+        width: 100%;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .main-header nav ul li a {
+        padding: 10px;
+    }
+    
+    /* Fuerza columnas simples en móviles para Claridad y Usabilidad */
+    .document-list, .video-grid, .interactive-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .news-card {
+        flex-direction: column; /* Apila fecha y contenido */
+    }
+    
+    .news-date {
+        margin-right: 0;
+        margin-bottom: 10px;
+        min-width: 100%;
+    }
+    
+    .process-filters {
+        /* Permite que los botones de filtro se apilen si no caben */
+        flex-wrap: wrap; 
+    }
+}
+/* ✅ BOTÓN DE VOTO DESACTIVADO */
+.submit-btn:disabled {
+    background-color: #bfbfbf;
+    color: #666;
+    cursor: not-allowed;
+    opacity: 0.8;
+}

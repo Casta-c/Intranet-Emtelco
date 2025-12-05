@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial de Reconocimientos | Emtelco</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <style>
+        /* Estilos adicionales para la página de historial - Se pueden agregar a styles.css si lo prefieres */
+        .historial-list {
+            display: grid;
+            gap: 20px;
+        }
+        .historial-item {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            border-left: 5px solid #ffcc00; /* Color distintivo de Reconocimiento */
+        }
+        .historial-item h3 {
+            color: #004d99;
+            margin-top: 0;
+            border-bottom: 1px dashed #ddd;
+            padding-bottom: 5px;
+            font-size: 1.4rem;
+        }
+        .historial-meta {
+            font-size: 0.9rem;
+            color: #888;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body class="historial-page">
+    
+    <header class="main-header">
+        <h1>Intranet Emtelco | Salud Total EPS</h1>
+        
+        <div class="search-box">
+            <input type="search" placeholder="Buscar procesos, documentos o noticias..." aria-label="Buscar en la intranet">
+            <button type="submit">🔍</button>
+        </div>
+        
+        <nav aria-label="Navegación principal de la Intranet">
+            <ul>
+                <li><a href="index.html#procesos">Procesos & Normas</a></li>
+                <li><a href="index.html#comunicados">Comunicados</a></li>
+                <li><a href="index.html#participacion">Voz del Colaborador</a></li>
+                <li><a href="index.html#capacitacion">Capacitación</a></li>
+                <li><a href="index.html#contacto">Contacto Rápido</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section class="content-section">
+            <h2>🎉 Colaboradores y Equipos Destacados 2025</h2>
+            <p class="summary">
+                Listado de todos los reconocimientos otorgados por su excelencia, liderazgo y contribución al bienestar.
+            </p>
+
+            <div class="historial-list">
+                
+                <article class="historial-item">
+                    <h3>Angelly Moreno (Operaciones Call Center)</h3>
+                    <p>Motivo: Liderazgo en la Implementación de Plan de Mejora en la gestión de turnos y procesos de direccionamiento.</p>
+                    <p class="historial-meta">Fecha: Diciembre 2025 | Otorgado por: Gerencia de RRHH</p>
+                </article>
+
+                <article class="historial-item">
+                    <h3>Equipo de Soporte Técnico</h3>
+                    <p>Motivo: Lograr un 99% de satisfacción en el trimestre en tickets resueltos, superando la meta en 5 puntos porcentuales.</p>
+                    <p class="historial-meta">Fecha: Noviembre 2025 | Otorgado por: Dirección de Tecnología</p>
+                </article>
+
+                <article class="historial-item">
+                    <h3>Laura Quintero (Finanzas)</h3>
+                    <p>Motivo: Diseño de un nuevo manual de control de inventario que redujo errores de registro en un 15%.</p>
+                    <p class="historial-meta">Fecha: Octubre 2025 | Otorgado por: Subgerencia de Finanzas</p>
+                </article>
+                
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 KAT Forge. | Este listado es estático y requiere edición manual.</p>
+    </footer>
+
+</body>
+</html>

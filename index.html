@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intranet Emtelco | Salud Total EPS | Acceso Rápido y Claro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+
+        <!-- ✅ HEADER CORREGIDO SIN QUITAR FUNCIONES -->
+        <div class="header-top">
+            <h1>Intranet Emtelco | Salud Total EPS</h1>
+
+            <div class="search-box">
+                <input type="search" placeholder="Buscar procesos, documentos o noticias..."
+                    aria-label="Buscar en la intranet">
+                <button type="submit">🔍</button>
+            </div>
+        </div>
+
+        <nav aria-label="Navegación principal de la Intranet">
+            <ul>
+                <li><a href="#procesos">Procesos & Normas</a></li>
+                <li><a href="#comunicados">Comunicados</a></li>
+                <li><a href="#participacion">Voz del Colaborador</a></li>
+                <li><a href="#capacitacion">Capacitación</a></li>
+                <li><a href="#contacto">Contacto Rápido</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <!-- ================= PROCESOS ================= -->
+        <section id="procesos" class="content-section">
+            <h1>Centro de Procesos y Normas Internas</h1>
+
+            <p class="summary">
+                Aquí encontrará la documentación oficial, procedimientos, y guías de uso interno.
+            </p>
+
+            <div class="process-filters">
+                <button class="filter-btn active">Todos los Procesos</button>
+                <button class="filter-btn">Recursos Humanos</button>
+                <button class="filter-btn">Finanzas</button>
+                <button class="filter-btn">Operaciones Call Center</button>
+                <button class="filter-btn">Protocolos Salud Total</button>
+            </div>
+
+            <div class="document-list">
+
+                <article class="document-card">
+                    <h2>Guía de Solicitud de Vacaciones y Permisos</h2>
+                    <p class="doc-meta">Última actualización: 10/11/2025 | Categoría: RRHH</p>
+                    <ul>
+                        <li>Formulario de solicitud adjunto</li>
+                        <li>Plazo mínimo de aviso: 15 días hábiles</li>
+                    </ul>
+                    <a href="/docs/vacaciones.pdf" class="download-link">Descargar Procedimiento (PDF)</a>
+                </article>
+
+                <article class="document-card">
+                    <h2>Protocolo de Ingreso de Facturas a Proveedores</h2>
+                    <p class="doc-meta">Última actualización: 01/12/2025 | Categoría: Finanzas</p>
+                    <ul>
+                        <li>Pasos para el registro en el sistema contable</li>
+                        <li>Contactos del departamento de Tesorería</li>
+                    </ul>
+                    <a href="/docs/facturas.docx" class="download-link">Ver Documento</a>
+                </article>
+
+                <article class="document-card">
+                    <h2>Manual Operativo: Direccionamientos</h2>
+                    <p class="doc-meta">Última actualización: 04/12/2025 | Categoría: Operaciones</p>
+                    <ul>
+                        <li>Procedimiento para municipios con dificultad de medios virtuales</li>
+                        <li>Escalamiento interno de casos pendientes</li>
+                    </ul>
+                    <a href="/docs/manual_direccionamientos.pdf" class="download-link">Descargar Protocolo</a>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ================= COMUNICADOS ================= -->
+        <section id="comunicados" class="content-section">
+            <h2>Comunicados y Novedades</h2>
+
+            <div class="news-feed">
+
+                <article class="news-card">
+                    <div class="news-date">
+                        <span class="day">04</span>
+                        <span class="month">Dic</span>
+                    </div>
+                    <div class="news-body">
+                        <h3>Actualización en protocolo COVID</h3>
+                        <p>Nueva normativa de ingreso a las instalaciones.</p>
+                        <a href="#" class="read-more">Leer más →</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-date">
+                        <span class="day">28</span>
+                        <span class="month">Nov</span>
+                    </div>
+                    <div class="news-body">
+                        <h3>Taller de Manejo del Estrés</h3>
+                        <p>Inscripciones abiertas para colaboradores.</p>
+                        <a href="#capacitacion" class="read-more">Ver detalles →</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ================= PARTICIPACIÓN ================= -->
+        <section id="participacion" class="content-section interactive-section">
+            <h2>Voz del Colaborador</h2>
+
+            <div class="interactive-grid">
+
+                <!-- ENCUESTA -->
+                <article class="widget-card survey-widget">
+                    <h3>Encuesta Rápida</h3>
+                    <p>¿Qué tan fácil fue encontrar la información?</p>
+
+                    <div class="poll-options">
+                        <input type="radio" name="claridad" value="Muy fácil"> Muy fácil<br>
+                        <input type="radio" name="claridad" value="Aceptable"> Aceptable<br>
+                        <input type="radio" name="claridad" value="Difícil"> Difícil
+                    </div>
+
+                    <button class="submit-btn">Votar</button>
+                </article>
+
+                <!-- FORO -->
+                <article class="widget-card forum-widget">
+                    <h3>Foro de Casos</h3>
+
+                    <div id="foroMensajes">
+                 <p><strong>Ana:</strong> ¿Alguien sabe cómo escalar un caso urgente?</p>
+                <p><strong>Carlos:</strong> Debes enviarlo por el canal de priorización.</p>
+                </div>
+
+                <input type="text" id="nuevoMensaje" placeholder="Escribe tu mensaje...">
+                <button id="enviarForo" class="btn-forum">Enviar</button>
+                </article>
+
+
+                <!-- RECONOCIMIENTO -->
+                <article class="widget-card recognition-widget">
+                    <h3>Reconocimiento al Esfuerzo 🌟</h3>
+                    <p>¡Felicidades a Angelly Moreno por su aporte al equipo!</p>
+                    <a href="historial-reconocimiento.html" class="read-more">Ver historial →</a>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ================= CAPACITACIÓN ================= -->
+        <section id="capacitacion" class="content-section">
+            <h2>Material de Capacitación</h2>
+
+            <div class="video-grid">
+
+                <article class="video-card">
+                    <div class="video-player">
+                        <iframe src="https://www.youtube.com/embed/ejemplo1" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <h3>Manejo del Estrés</h3>
+                </article>
+
+                <article class="video-card">
+                    <div class="video-player">
+                        <iframe src="https://www.youtube.com/embed/ejemplo2" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <h3>Ingreso de Casos</h3>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ================= CONTACTO ================= -->
+        <section id="contacto" class="content-section">
+            <h2>Contacto Rápido</h2>
+            <ul>
+                <li>Línea Emocional: 555-5555</li>
+                <li>Soporte Técnico: 555-1234</li>
+                <li>Recursos Humanos: 555-5678</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 KAT Forge. | Usabilidad y Bienestar Humano.</p>
+    </footer>
+
+    <script src="scripts.js" defer></script>
+
+</body>
+</html>
